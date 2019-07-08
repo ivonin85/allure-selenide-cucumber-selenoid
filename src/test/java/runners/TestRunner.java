@@ -18,7 +18,7 @@ public class TestRunner {
     @BeforeClass
     public static void before() {
         Configuration.baseUrl = "http://localhost:4444/";
-        Configuration.remote = "http://18.130.155.109:4444/wd/hub";
+        Configuration.remote = "http://3.121.199.249:4444/wd/hub";
         Configuration.timeout = 20000;
         // ChromeDriverManager.getInstance().setup();
         Configuration.browserSize = "1600x1024";
