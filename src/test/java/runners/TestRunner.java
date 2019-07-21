@@ -10,15 +10,15 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         strict = true,
         format = {"pretty", "json:target/cucumber.json", "html:target/cucumber.html"},
-        features = {"src/test/cucumber/"},
+        features = {"src/test/cucumber/raiffeisen-home.feature"},
         plugin = {"io.qameta.allure.cucumber2jvm.AllureCucumber2Jvm"},
-        glue = {"steps", "hooks"})
+        glue = {"steps", "hooks", "pages"})
 
 public class TestRunner {
     @BeforeClass
     public static void before() {
         Configuration.baseUrl = "http://localhost:4444/";
-        Configuration.remote = "http://18.130.227.197:4444/wd/hub";
+        Configuration.remote = "http://18.130.9.77:4444/wd/hub";
         Configuration.timeout = 20000;
         // ChromeDriverManager.getInstance().setup();
         Configuration.browserSize = "1600x1024";
