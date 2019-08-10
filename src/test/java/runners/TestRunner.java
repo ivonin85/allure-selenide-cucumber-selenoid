@@ -21,7 +21,7 @@ public class TestRunner {
         //WebDriverManager.chromedriver().version("76").setup();
         Configuration.baseUrl = "http://localhost:4444/";
         Configuration.remote = "http://35.158.91.91:4444/wd/hub";
-        Configuration.timeout = 20000;
+        Configuration.timeout = 10000;
         Configuration.browserSize = "1600x1024";
         Configuration.browserCapabilities.setCapability("enableVNC", true);
         Configuration.browserCapabilities.setCapability("enableVideo", false);
