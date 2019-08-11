@@ -17,4 +17,13 @@ public class HomePage {
         $("input.search-input").sendKeys(searchQuery);
         $("button.m-search.button.default.flat-button").click();
     }
+
+    public void clickCatalog(){
+        $("._85855").click();
+    }
+
+    public void selectCategoryInCatalog(){
+
+        $("[href=\"/category/knigi-16500/\"]").click();
+    }
 }
