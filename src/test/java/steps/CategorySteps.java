@@ -21,4 +21,14 @@ public class CategorySteps {
         category.seltSubCategory(arg1);
     }
 
+    @Допустим("^Каталог -- Добавляем фильтр \"([^\"]*)\"$")
+    public void каталог_Добавляем_фильтр(String arg1) {
+        category.addFilter(arg1);
+    }
+
+    @Допустим("^Каталог -- Устанавливаем диапазон цен от \"([^\"]*)\" до \"([^\"]*)\"$")
+    public void каталог_Устанавливаем_диапазон_цен_от_до(String arg1, String arg2) {
+        category.selectPriceRange(arg1, arg2);
+    }
+
 }

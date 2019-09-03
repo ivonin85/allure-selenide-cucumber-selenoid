@@ -24,6 +24,11 @@ public class HomeSteps {
         home.openSite(siteUrl);
     }
 
+    @Допустим("^Открываем сайт на странице \"([^\"]*)\"$")
+    public void открываем_сайт_на_странице(String arg1) {
+        home.openSite(arg1);
+    }
+
     @Допустим("^Главная -- Осуществляем поиск по запросу \"([^\"]*)\"$")
     public void главная_Осуществляем_поиск_по_запросу(String arg1) {
         home.searchQuery(arg1);

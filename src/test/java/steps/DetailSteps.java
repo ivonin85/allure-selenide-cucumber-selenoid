@@ -21,4 +21,9 @@ public class DetailSteps {
         detail.goToCart();
     }
 
+    @Допустим("^Детали -- Сравниваем все что можно сравнить$")
+    public void детали_Сравниваем_все_что_можно_сравнить() {
+        detail.compareData();
+    }
+
 }

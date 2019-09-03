@@ -11,20 +11,20 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         strict = true,
         format = {"pretty", "json:target/cucumber.json", "html:target/cucumber.html"},
-        features = {"src/test/cucumber/ozon.feature"},
+        features = {"src/test/cucumber/test.feature"},
         plugin = {"io.qameta.allure.cucumber2jvm.AllureCucumber2Jvm"},
         glue = {"steps"})
 
 public class TestRunner {
     @BeforeClass
     public static void before() {
-        /*WebDriverManager.chromedriver().version("76").setup();*/
+        WebDriverManager.chromedriver().version("76").setup();
         Configuration.timeout = 10000;
-        Configuration.baseUrl = "http://localhost:4444/";
+        /*Configuration.baseUrl = "http://localhost:4444/";
         Configuration.remote = "http://35.158.91.91:4444/wd/hub";
-        Configuration.browserSize = "1600x1024";
+        Configuration.browserSize = "1920x1080";
         Configuration.browserCapabilities.setCapability("enableVNC", true);
-        Configuration.browserCapabilities.setCapability("enableVideo", false);
+        Configuration.browserCapabilities.setCapability("enableVideo", false);*/
     }
 
 }
